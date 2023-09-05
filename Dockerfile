@@ -11,6 +11,10 @@ COPY ./pom.xml ./
 # Build the application using Maven
 RUN mvn clean install
 
+# Test stage with JUnit test cases
+FROM build AS test
+RUN mvn test
+
 # Use a lightweight Alpine-based OpenJDK runtime as the final image
 FROM openjdk:11-jre-slim
 
@@ -18,7 +22,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the built JAR file from the build stage to the final image
-COPY --from=build /app/target/your-app.jar ./app.jar
+COPY --from=test /app/target/your-app.jar ./app.jar
 
 # Expose the port that your Java application will listen on (if needed)
 EXPOSE 8080
