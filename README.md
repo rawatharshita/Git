@@ -25,7 +25,7 @@ Release branches are versioned (e.g., uat-1.0, prod-1.0) and are based on a stab
 Code changes from development are promoted to these release branches when they are deemed stable and ready for the respective environment.
 Deployments to UAT and production environments are made from their respective release branches.
 # Branching Responsibilties:
-- Feature, Development and Test branch is created by developers
+- Feature, Development and Test branch is created by developers and UAT & Prod release branches are created by DevOps
 
 # directory structure
 - my-maven-project/
