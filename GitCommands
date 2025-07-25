@@ -1,0 +1,24 @@
+##To fetch remote branch to your local
+
+Step-1:
+git fetch origin    #Fetch All Remote Branches
+                    #This updates your local view of the remote branches without modifying your working directory.
+
+
+Step-2:
+git branch -r       #List Remote Branches
+                    #This will show something like:
+                    #                       origin/main
+                    #                       origin/users/t988853/20250723_tf_subnet
+
+
+Step-3:
+git checkout -b <users/t988853/20250723_tf_subnet> <origin/users/t988853/20250723_tf_subnet>   #Checkout the Remote Branch Locally
+                                                                                               #This creates a local branch and sets it to track the remote branch.
+
+Step-4:
+git pull            #Pull Latest Changes
+
+Or 
+
+git pull origin users/t988853/20250723_tf_subnet     #Explicit Pull
