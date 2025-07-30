@@ -22,3 +22,10 @@ git pull            #Pull Latest Changes
 Or 
 
 git pull origin users/t988853/20250723_tf_subnet     #Explicit Pull
+
+
+Step-5
+
+git add .
+git commit -m ""
+git push <yourbranch>:<origin/remotebranch>
