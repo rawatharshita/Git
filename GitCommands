@@ -29,3 +29,7 @@ Step-5
 git add .
 git commit -m ""
 git push <yourbranch>:<origin/remotebranch>
+
+
+##If current directory is not git initialized( not a git directory)
+git init   # the current directory should have .git folder or it should be a subfolder of .git
